@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pjs21s.github.io/sitemap.xml
