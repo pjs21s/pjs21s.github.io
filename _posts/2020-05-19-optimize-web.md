@@ -68,6 +68,7 @@ CSS를 외부 파일로 분리하면 유지 보수도 쉽고 브라우저 캐시
 <webappDirectory>와 `maven-war-plugin`의 <directory>의 경로를 같게 해야 압축한 항목들이 알아서 교체가 되어
 war 파일을 뽑아줍니다. 그렇지 않으면 압축한 소스코드들이 별도의 폴더에만 생성됩니다.
 
+
 ```xml
 <plugin>
     <groupId>net.alchim31.maven</groupId>
@@ -101,6 +102,7 @@ war 파일을 뽑아줍니다. 그렇지 않으면 압축한 소스코드들이 
 </plugin>
 ```
 
+
 `loading='lazy'`를 사용하는 방법이 최근 구글에서 발표되었으나 아직은 제대로 사용할 수 없기에 이미지 lazy loading은
 오픈 소스를 사용합니다.
 <https://github.com/aFarkas/lazysizes>
@@ -110,6 +112,7 @@ war 파일을 뽑아줍니다. 그렇지 않으면 압축한 소스코드들이 
 이번엔 Script를 lazy loading 해보겠습니다.
 Script를 lazy loading하는 이유는 특정 기능에만 사용하는 Script를 로딩하느라 시간을 낭비하지 않기 위해서입니다.
 아래와 같은 코드를 통해 문서가 전부 로딩되고 나서 Script를 가져올 수 있습니다.
+
 
 ```javascript
 function lazyload(){
@@ -132,6 +135,7 @@ function lazyload(){
 		lazyload();
 	}
 ```
+
 
 # pngquant 사용하여 화면에서 사용하는 이미지 압축
 
@@ -163,11 +167,13 @@ tinyPNG는 압축을 하는 이미지가 일정 수 이상이 되면 유료가 �
 아래와 같은 코드를 .sh 파일에 적고 실행하면 서브 디렉토리가 여러개 있어도 png만 찾아서
 압축합니다. 당연히 저 .sh 파일은 여러개의 서브디렉토리를 포함하는 상위 디렉토리에 있어야 합니다.
 
+
 ```shell
 for file in `find . -name '*.png'`; do
     pngquant --quality=75-85 --verbose --force --ext '.png' $file
 done
 ```
+
 
 이미지 압축을 통해 약 30 - 70% 사이의 압축이 이루어졌고 압축 전에 비해 웹 페이지 용량이 40%정도 감소했습니다.
 
