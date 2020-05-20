@@ -58,6 +58,7 @@ CSS를 외부 파일로 분리하면 유지 보수도 쉽고 브라우저 캐시
 
 # Lazy Loading, YUI Compressor 사용하여 CSS, Script 압축
 
+참고 : <https://www.baeldung.com/maven-minification-of-js-and-css-assets>
 스프링의 경우 YUI Compressor를 사용하면 배포를 위해 war를 뽑을 때 Script, CSS를 압축해줍니다.
 고칠 필요가 없는 외부 라이브러리의 경우 미리 압축을 해놓을 수 있지만 추후 유지 보수가 필요한
 자체 JS, CSS라면 미리 압축을 해놓을 시 유지보수가 힘들것이므로 배포할때만 압축을 합니다.
