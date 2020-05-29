@@ -6,7 +6,9 @@ permalink: /about/
 
 ### More Information
 
-Django Capston Project - ing... 190410
+Java, Spring, Python, Postgresql, Centos
+Japanese, English
+Web Developer
 
 ### Contact me
 
