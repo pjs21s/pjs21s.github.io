@@ -19,10 +19,11 @@ Debugger For Java, ESLint, Gradle Language Support, Java Extension Pack, Lombok 
 
 </details>
 
+----
   
 **Vue.js + Spring Boot 연동 시작 및 확인**
 
-<img src="/Users/vors/pjs21s/images/springboot1.png">
+<img src="/images/springboot1.png">
 
 F1을 눌러서 프로젝트를 생성합니다.
 기본 이름으로 쭉 생성하시다가 마지막에 Dependencies를 선택해야하는 곳에서 저는 아래와 같이 선택했습니다.
@@ -41,11 +42,11 @@ com.example -> demo -> 2.3.2 -> Spring Data JAP, Spring Boot DevTools, Lombok, S
 
 여기까지 정상적으로 설치가 되면 아래와 같은 디렉토리 구조를 가지게 됩니다.
 
-<img src="C:\Users\user\Desktop\posting\springboot3.png">
+<img src="/images/springboot3.png">
 
 그리고 JAVA 11을 설치하고 `File -> Preference -> Settings`에 들어가서 경로를 설정해줍니다.
 
-<img src="C:\Users\user\Desktop\posting\springboot4.png">
+<img src="/images/springboot4.png">
 
 ```
 "java.home": "C:\\Program Files\\Java\\jdk-11.0.8",
@@ -131,7 +132,7 @@ dependencies {
 라이브러리 설치 완료만 기다렸다가 DemoApplication.java에서 Run을 눌러주거나
 왼쪽 하단에 `Spring-Boot DashBoard`에서 실행을 시켜줘도 됩니다.
 
-<img src="C:\Users\user\Desktop\posting\springboot5.png">
+<img src="/images/springboot5.png">
 
 만약 이게 실행이 잘 안되면 아직 라이브러리가 설치되고 있거나 JAVA 관련 경로 설정을 잘 못했을 가능성이 있으니
 다시 검토하셔야 합니다.
@@ -139,7 +140,7 @@ dependencies {
 실행시키고 `localhost:3000`으로 들어가면 아래와 같은 화면이 나오면 정상 실행 된것입니다.
 로그인 화면이 나오는 이유는 스프링부트의 기본적인 security때문에 그렇습니다.
 
-<img src="C:\Users\user\Desktop\posting\springboot6.png">
+<img src="/images/springboot6.png">
 
 **Postgres 연동 및 CRUD**
 
@@ -570,12 +571,12 @@ public class BoardApiControllerTests {
 
 여기까지 전부 완료되면 이런 구조가 될것입니다.
 
-<img src="C:\Users\user\Desktop\posting\springboot7.png">
+<img src="/images/springboot7.png">
 
 
 그리고 이제 테스트를 할 수 있습니다.
 
-<img src="C:\Users\user\Desktop\posting\springboot8.png">
+<img src="/images/springboot8.png">
 
 이미지처럼 Run Test가 생기고 클릭하면 테스트가 실행됩니다.
 성공하면 이미지처럼 체크표시가 뜨고 아니면 X 표시가 뜨게 됩니다.
@@ -589,7 +590,7 @@ CSS가 괜히 들어가면 코드가 복잡해지니 기본 코드만 가지고 
 
 `npm install --save axios vue-router`로 필요한 라이브러리를 설치합니다.
 
-<img src="C:\Users\user\Desktop\posting\springboot9.png">
+<img src="/images/springboot9.png">
 
 위와 같은 구조로 파일들을 만들겁니다.
 
