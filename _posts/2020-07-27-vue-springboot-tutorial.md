@@ -19,7 +19,8 @@ Debugger For Java, ESLint, Gradle Language Support, Java Extension Pack, Lombok 
 
 </details>
 
-# Vue.js + Spring Boot 연동 시작 및 확인
+  
+**Vue.js + Spring Boot 연동 시작 및 확인**
 
 <img src="/Users/vors/pjs21s/images/springboot1.png">
 
@@ -140,7 +141,7 @@ dependencies {
 
 <img src="C:\Users\user\Desktop\posting\springboot6.png">
 
-# Postgres 연동 및 CRUD
+**Postgres 연동 및 CRUD**
 
 이제 Postgres를 연동하고 확인해보겠습니다. DB는 이미 설치되어 있고 PORT 관련 설정도 되어있다고 가정합니다.
 `application.properties`에 본인 DB 주소와 ID, PW가 잘 적혀있는지 확인합니다.
@@ -581,7 +582,7 @@ public class BoardApiControllerTests {
 
 junit5 테스트 할 때는 AllArgsConstructor가 아니라 Autowired로 생성자 주입을 해야 정상 작동 됩니다. 위 코드를 활용하여 CRUD 테스트가 전부 정상적으로 통과하면 이제 UI를 만들어 볼 차례입니다.
 
-# Vue.js UI 만들고 기능 테스트
+**Vue.js UI 만들고 기능 테스트**
 
 우선은 글쓰기 기능만 만들어보겠습니다.
 CSS가 괜히 들어가면 코드가 복잡해지니 기본 코드만 가지고 테스트 해봅니다.
