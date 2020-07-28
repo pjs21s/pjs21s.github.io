@@ -13,6 +13,9 @@ Vue init은 사용하지 않습니다.
 처음에 연습할때는 좋지만 실제로 프로젝트를 만들때는 Vue init으로 하면 무겁고 디렉토리도 복잡해져서 관리가 안되어 사용하지 않습니다.
 
 Vscode에서 진행했고 사용한 플러그인은 아래와 같습니다.
+  
+**Vue.js + Spring Boot 연동 시작 및 확인**
+
 
 <details markdown="1">
 <summary>펼치기</summary>
@@ -22,8 +25,7 @@ Debugger For Java, ESLint, Gradle Language Support, Java Extension Pack, Lombok 
 </details>
 
 ----
-  
-**Vue.js + Spring Boot 연동 시작 및 확인**
+
 
 <img src="/images/springboot1.png">
 
