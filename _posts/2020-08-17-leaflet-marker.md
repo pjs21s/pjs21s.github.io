@@ -23,29 +23,32 @@ comments: true
         :key="marker.name"
         :lat-lng="marker.latLng"
         >
-        <l-icon
-          :iconUrl="markerImg"
-          :shadowUrl="markerShadowImg"
-        >
-        </l-icon>
         </l-marker>
     </l-map>
   </div>
 </template>
 
 <script>
-import { LMap, LTileLayer, LMarker, LIcon } from 'vue2-leaflet'
-import { latLng } from 'leaflet'
+import { LMap, LTileLayer, LMarker } from 'vue2-leaflet';
+import { latLng, Icon } from 'leaflet';
 import markerImg from 'leaflet/dist/images/marker-icon.png';
 import markerShadowImg from 'leaflet/dist/images/marker-shadow.png';
+import markerRetinaImg from 'leaflet/dist/images/marker-icon-2x.png';
 
 export default {
   name: 'HelloWorld',
   components: {
     LMap,
     LTileLayer,
-    LMarker,
-    LIcon
+    LMarker
+  },
+  mounted() {
+  delete Icon.Default.prototype._getIconUrl;
+  Icon.Default.mergeOptions({
+    iconRetinaUrl: markerRetinaImg,
+    iconUrl: markerImg,
+    shadowUrl: markerShadowImg,
+  });
   },
   data() {
     return {
@@ -103,6 +106,8 @@ export default {
 ```
 
 LIcon을 사용해서 아이콘 정의도 해주었습니다. 왜냐하면 공식문서에도 나와있듯이 웹팩하고 같이 쓰면 아이콘 이미지가 손실되는 문제가 있기때문에 별도로 임포트해주어 사용해야 합니다.
+
+https://vue2-leaflet.netlify.app/quickstart/#marker-icons-are-missing
 
 코드를 알맞게 고친 후 혹시 동작이 안되면 끄고 `npm run build`를 한번 하고 시작해주세요.
 
