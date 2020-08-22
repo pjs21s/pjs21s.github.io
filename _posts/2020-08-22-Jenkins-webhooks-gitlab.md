@@ -18,7 +18,7 @@ Gradle, Jar로 배포하는 내용을 포함합니다.
 도커에 Jenkins 이미지를 다운받아 설치하여 실행합니다. 
 
 `docker run -p 8080:8080 -p 50000:50000 --name jenkins jenkins/jenkins`로 포트를 열어주면서 설치합니다.
-만약 본인의 도커 젠킨스의 설정이 재부팅할때마다 설정이 증발한다고 하면 아래처럼 본인 로컬에 연결하여 run 해야합니다.
+만약 본인의 도커 젠킨스의 설정이 재부팅할때마다 증발한다고 하면 아래처럼 `-v` 옵션을 사용해 본인 로컬에 연결하여 실행해야 합니다.
 
 `docker run -v C:\Users\Jin\Documents:/home/workspace:Z -p 8080:8080 -p 50000:50000 --name jenkins jenkins/jenkins `
 
@@ -80,7 +80,7 @@ private key에는 방금 생성한 개인키를 적어주시면 됩니다.
 
 <img src="/images/jenkinswebhooks9.png">
 
-gitlab으로 가서 Jenkins 서버에서 생성한 공개키를 설정에 적어줍니다.
+gitlab으로 가서 Jenkins 서버에서 생성한 공개키(id_rsa.pub)를 설정에 적어줍니다.
 `Setting -> SSH Keys`
 <img src="/images/jenkinswebhooks11.png">
 
@@ -89,7 +89,7 @@ gitlab으로 가서 Jenkins 서버에서 생성한 공개키를 설정에 적어
 <img src="/images/jenkinswebhooks6.png">
 
 그리고 스크롤을 내려서 소스 코드 관리로 와서 gitlab 프로젝트의 주소를 적어주고 Credential에는 방금 추가했던 키를
-선택해줍니다. Branch는 기본 마스터지만 혹시 테스트나 개인 이유로 변경해야한다면 `*/feature/test`와 같은 형식으로 변경하시면 됩니다.
+선택해줍니다. 기본적으로 Branch는 마스터지만 혹시 변경해야한다면 `*/feature/test`와 같은 형식으로 변경하시면 됩니다.
 여기서는 프로젝트 주소가 `https~` 형식이 아니라 `git~` 형식을 사용했습니다.
 <img src="/images/jenkinswebhooks12.png">
 
@@ -108,14 +108,14 @@ URL에 `http://localhost:8080/project/vue_spring`을 넣으면 되는데요. 그
 있기때문에 저희는 주소를 생성해서 Webhook을 등록하겠습니다.
 
 https://ngrok.com/에서 ngrok 프로그램을 다운해서 저장해서 압축을 풀어 실행합니다.
-프로그램에 `ngrok http http://localhost:8080`와 같은 명령어로 주소를 생성합니다.
+프로그램에서 `ngrok http http://localhost:8080`와 같은 명령어로 주소를 생성합니다.
 
 `http://bd5b27b14ef1.ngrok.io` 저는 이 주소가 나왔고 `http://bd5b27b14ef1.ngrok.io/project/vue_spring` 원래 Webhook 주소에 맞게
 수정해서 적어주겠습니다.
 
 <img src="/images/jenkinswebhooks14.png">
 
-다른 설정을 손대지 않고 아래로 내려서 Add합니다.
+다른 설정을 손대지 않고 아래로 내려서 Add webhookk합니다.
 
 <img src="/images/jenkinswebhooks15.png">
 
@@ -186,18 +186,18 @@ Jenkins 설정 플러그인 관리에 가셔서 `Publish Over SSH`를 설치해�
 Publish over SSH 설정을 스크린샷처럼 해줍니다.
 <img src="/images/jenkinswebhooks22.png">
 
-Passphrase - 접속한 배포 서버의 암호
-Key - Jenkins 서버에서 배포서버로 보낸 공개키
+**Passphrase** - 접속할 배포 서버의 암호  
+**Key** - Jenkins 서버에서 배포서버로 보낸 공개키
 
 그리고 ssh servers 추가를 눌러서 추가로 적습니다.
 
-Name - 설정할 아무 이름
-Hostname - 배포서버 IP
-Username - 배포서버 접속할 유저 이름
-Remote Directory - Jenkins 서버에서 보낼 파일을 저장 할 배포서버의 상위 디렉토리
+**Name** - 설정할 아무 이름  
+**Hostname** - 배포서버 IP  
+**Username** - 배포서버 접속할 유저 이름  
+**Remote Directory** - Jenkins 서버에서 보낼 파일을 저장 할 배포서버의 상위 디렉토리  
 (/usr/local/server에 저장하고 싶으면 /usr만 적는다.)
 
-그리고 Test Configuration을 눌러서 테스트를 통과하면 여기까지는 설정을 잘 완료된겁니다.
+그리고 Test Configuration을 눌러서 Success가 뜨면 여기까지는 설정이 잘 완료된겁니다.
 
 이제 jenkins 프로젝트 설정으로 들어가서 `빌드 후 조치 -> Send build artifacts over SSH`을 선택합니다.
 
@@ -205,23 +205,25 @@ Remote Directory - Jenkins 서버에서 보낼 파일을 저장 할 배포서버
 
 시스템 설정에서 Publish over SSH를 정상적으로 설정하셨다면 Name은 자동으로 선택됩니다.
 
-Source files - 보낼 파일의 경로입니다.
-Remove prefix - 보낼 파일 이외의 제외처리를 할 경로입니다.
+**Source files** - 보낼 파일의 경로입니다.  
+**Remove prefix** - 보낼 파일 이외의 제외처리를 할 경로입니다.  
 build/libs/demo.jar라고 적었어도 Jenkins는 이 경로에 있는 모든 파일을 보내기때문에
 .jar 이외의 폴더나 파일이 필요없으시다면 build/libs/로 제외하셔야합니다.
-Remote directory - 파일을 보낼 배포서버의 경로입니다. 시스템 설정에서 상위디렉토리를 이미 /usr이라고
-설정했기때문에 여기서는 local/server/만 적어줍니다. 그러면 /usr/local/server/로 demo.jar가
+**Remote directory** - 파일을 보낼 배포서버의 경로입니다.  
+시스템 설정에서 상위디렉토리를 이미 /usr이라고 설정했기때문에 여기서는 local/server/만 적어줍니다.
+그러면 /usr/local/server/로 demo.jar가
 송신됩니다.
-Exec command - 파일을 보내고 실행 할 명령어를 적습니다. 이상하게 java -jar demo.jar 명령어가 작동하지 않아서
-스크립트를 .jar 실행하는 스크립트를 만들어 명령어를 넣었습니다. > /dev/null 2>&1 를 넣어주지 않으면 에러가 발생하기때문에 무시처리하겠습니다.
+**Exec command** - 파일을 보내고 실행 할 명령어를 적습니다.  
+이상하게 java -jar demo.jar 명령어가 작동하지 않아서 스크립트를 .jar 실행하는 스크립트를 만들어 명령어를 넣었습니다.
+> /dev/null 2>&1 를 넣어주지 않으면 에러가 발생하기때문에 무시처리하겠습니다.  
 
 참고로 스크립트 파일을 자동을 실행하게 만들려면 미리 권한이 조정되어 있어야 합니다.
 `chmod 755 run.sh`로 실행할 수 있도록 만듭니다.
 
 이제 푸쉬해서 홈페이지까지 뜨는지 확인해봅니다.
 저는 아래 로그처럼 나오고 배포까지 완료되었습니다.
-Vue + Spring Boot 환경이다 보니 원래는 bootJar 명령을 실행할 때 npm run build까지 해서 한번에 끝내야 하는데 아직
-그렇게 까지는 못해서 static 폴더를 포함시켜줘서 배포하였습니다.
+Vue + Spring Boot 환경이다 보니 원래는 bootJar 명령을 실행할 때
+npm run build까지 해서 한번에 끝내야 하는데 아직 그렇게 까지는 못해서 static 폴더를 포함시켜줘서 배포하였습니다.
 
 ```log
 Started by GitLab push by JinSang Park
