@@ -6,9 +6,8 @@ permalink: /about/
 
 ### More Information
 
-Java, Spring, Python, Postgresql, Centos
-Japanese, English
-Web Developer
+Java, Spring Boot, Python, Postgresql, Centos
+Japanese, English, Vue.js, leaflet
 
 ### Contact me
 

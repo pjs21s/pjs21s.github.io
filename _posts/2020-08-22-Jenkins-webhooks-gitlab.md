@@ -157,6 +157,14 @@ Jenkins에 설정할 수 없습니다. 그래서 `find / -name "gradle" 2> /dev/
 여전히 다른건 손대지 않고 스크린샷처럼 Gradle Version, Tasks, Build File만 적어줍니다.
 <img src="/images/jenkinswebhooks19.png">
 
+그리고 저는 vue + spring boot 배포이다 보니 bootJar를 하기 전에 npm install, npm run build를 미리 실행해야 하기 때문에 이렇게 적어주겠습니다.
+
+<img src="/images/jenkinswebhooks24.png">
+
+만약에 Jenkins 서버에 npm이 최신버전이 다운되지 않는다면 아래 링크를 참고하시면 됩니다.
+
+https://stackoverflow.com/questions/41195952/updating-nodejs-on-ubuntu-16-04
+
 이제 gitlab에 push를 하면 변경을 감지해서 빌드를 자동으로 해주는지 테스트해보겠습니다.
 그리고 성공하면 원격 서버로 배포해보겠습니다.
 
@@ -221,8 +229,6 @@ build/libs/demo.jar라고 적었어도 Jenkins는 이 경로에 있는 모든 �
 
 이제 푸쉬해서 홈페이지까지 뜨는지 확인해봅니다.
 저는 아래 로그처럼 나오고 배포까지 완료되었습니다.
-Vue + Spring Boot 환경이다 보니 원래는 bootJar 명령을 실행할 때
-npm run build까지 해서 한번에 끝내야 하는데 아직 그렇게 까지는 못해서 static 폴더를 포함시켜줘서 배포하였습니다.
 
 ```log
 Started by GitLab push by JinSang Park
