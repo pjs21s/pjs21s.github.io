@@ -14,13 +14,13 @@ Native Query를 사용해도 되지만 업무 상 이유로 저는 Stream.concat
 두 컬렉션이 있고 stream 형식으로 변환하여 합치면 끝입니다.
 
 ```java
-    public Collection<studentDTO> getAllStudent(CommonDTO search, String sort) {
-        Collection<studentDTO> grade = studentRepo.getStuentByGrade(search, sort);
-        Collection<studentDTO> dream = studentRepo.getStudentByDream(search, sort);
+public Collection<studentDTO> getAllStudent(CommonDTO search, String sort) {
+    Collection<studentDTO> grade = studentRepo.getStuentByGrade(search, sort);
+    Collection<studentDTO> dream = studentRepo.getStudentByDream(search, sort);
 
-        return Stream.concat(grade.stream(), dream.stream())
-                .collect(Collectors.toList());
-    }
+    return Stream.concat(grade.stream(), dream.stream())
+            .collect(Collectors.toList());
+}
 ```
 
 하지만 이렇게 하면 테이블에 데이터를 넣어서 정렬 기능을 넣어야 할 때 데이터가 올바르게 정렬되지 않습니다.
@@ -72,13 +72,13 @@ return Stream.concat(grade.stream(), dream.stream())
 그 변수를 받아서 Comparator를 사용할 수 있게 됩니다.
 
 ```java
-    private static Map<String, Comparator<studentDTO>> comparatorMap = Map.of(
-        "age", Comparator.comparing(studentDTO::getStudentAge),
-        "name", Comparator.comparing(studentDTO::getStudentName),
-        "grade", Comparator.comparing(studentDTO::getStudentGrade),
-        "dream", Comparator.comparing(studentDTO::getStudentDream),
-        //"dream", Comparator.comparing(studentDTO::getStudentDream).reversed() -> 역순 정렬
-    );
+private static Map<String, Comparator<studentDTO>> comparatorMap = Map.of(
+    "age", Comparator.comparing(studentDTO::getStudentAge),
+    "name", Comparator.comparing(studentDTO::getStudentName),
+    "grade", Comparator.comparing(studentDTO::getStudentGrade),
+    "dream", Comparator.comparing(studentDTO::getStudentDream),
+    //"dream", Comparator.comparing(studentDTO::getStudentDream).reversed() -> 역순 정렬
+);
 ```
 
 주석처럼 파라미터를 받게 되면 아래와 같이 조건에 맞춰 동적 정렬을 수행할 수 있게 됩니다.
