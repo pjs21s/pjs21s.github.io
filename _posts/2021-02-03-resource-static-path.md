@@ -5,7 +5,7 @@ tags: Java
 comments: true
 ---
 
-<img src="/imgaes/resource1.png">
+<img src="/images/resource1.png">
 
 이번에 엑셀 기능을 개발하면서 경로를 설정하는 법에 대해 조금 힘들었었다.
 파이썬처럼 통일이 되어있지 않고 이 방법 저 방법 다양하게 쓰라고 하는데 되는 건 하나도 없고
