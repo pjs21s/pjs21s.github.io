@@ -58,8 +58,8 @@ comments: true
 사용 예제는 아래 있다.
 
 <img src="/images/zipoutput-code.png">
-
 <img src="/images/zipoutput-code2.png">
+<img src="/images/zipoutput-code3.png">
 
 정말로 이게 최선의 방법인지는 자신이 없지만 조금이라도 나은 기능을 만들었다면
 개인적으로는 만족한다.
