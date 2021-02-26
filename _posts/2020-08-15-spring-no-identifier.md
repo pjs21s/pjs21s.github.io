@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "no-identifier-specified-for-entity 스프링부트 에러 해결"
-tags: SpringBoot
+tags: Spring
 comments: true
 ---
 

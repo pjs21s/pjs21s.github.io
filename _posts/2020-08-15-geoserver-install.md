@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "윈도우 geoserver installer(설치파일) 만들기"
-tags: geoserver
+tags: Geoserver
 comments: true
 ---
 

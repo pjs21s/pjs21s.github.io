@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "vue-devtools 로컬에서 동작하지 않을 때"
-tags: vue
+tags: Vue
 comments: true
 ---
 

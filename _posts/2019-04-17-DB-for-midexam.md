@@ -1,7 +1,7 @@
 ---
 title: "Oracle DB 공부한것 정리"
 layout: post
-tags: Oracle SQL
+tags: Oracle
 comments: true
 ---
 

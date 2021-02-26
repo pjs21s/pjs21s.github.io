@@ -1,7 +1,7 @@
 ---
 title: "django-allauth OAuth google 사용하기"
 layout: post
-tag: django
+tag: Django
 comments: true
 ---
 

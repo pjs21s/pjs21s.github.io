@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "190406 django LoginRequiredMixin, TabularInline"
-tags: django
+tags: Django
 comments: true
 ---
 

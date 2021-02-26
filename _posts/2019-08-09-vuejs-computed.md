@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vue.js Computed 정리"
-tags: Vue.js
+tags: Vue
 comments: true
 ---
 

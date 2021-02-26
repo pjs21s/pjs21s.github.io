@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "개발자 1년 기념 나는 무엇을 못하고 무엇을 할 수 있는가"
-tags: memo
+tags: Memo
 comments: true
 ---
 

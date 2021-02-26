@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "VMWARE ifconfig 성공해도 인터넷 안되는 현상 해결"
-tags: vmware
+tags: Vmware
 comments: true
 ---
 

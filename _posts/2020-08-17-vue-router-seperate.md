@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "vue.js router 전개연산자로 파일 분리하기"
-tags: leaflet
+tags: Vue
 comments: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JS ToDoList 연습 ES6 문법으로 바꿔보기"
-tag: javascript
+tag: Javascript
 comments: true
 ---
 

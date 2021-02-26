@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Quartz crontrigger 중복 실행 방지 어노테이션"
-tags: quartz
+tags: Quartz
 comments: true
 ---
 

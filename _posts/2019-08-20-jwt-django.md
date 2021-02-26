@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Django REST와 JWT 사용해보기"
-tags: django
+tags: Django
 comments: true
 ---
 

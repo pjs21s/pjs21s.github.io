@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "181228 Create-react-app 기본 설치 방법"
-tags: react
+tags: React
 comments: true
 ---
 

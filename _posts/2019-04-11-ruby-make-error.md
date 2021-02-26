@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jekyll(지킬) 설치시 발생하는 ruby make 에러"
-tags: Jekyll ruby
+tags: Jekyll
 comments: true
 ---
 Jekyll 블로그를 생성하기 위해 ruby를 다운 받아 gem 명령어를 입력해서 설치를 하려하니

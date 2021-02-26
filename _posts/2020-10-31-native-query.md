@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "QueryDSL Union을 Stream.concat으로 대체하고 정렬기능 사용해보기"
-tags: jenkins
+tags: Jenkins
 comments: true
 ---
 

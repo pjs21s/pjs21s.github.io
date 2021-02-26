@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "맥, 윈도우 putty 서버에서 로컬로 파일 복사하기"
-tags: scp
+tags: Scp
 comments: true
 ---
 

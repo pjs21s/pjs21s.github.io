@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "190413 django unique_together 정리"
-tags: django
+tags: Django
 comments: true
 
 ---

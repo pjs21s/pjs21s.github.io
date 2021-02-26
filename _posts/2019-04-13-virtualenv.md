@@ -2,7 +2,7 @@
 title: "190413 django Virtualenv, requirements 정리"
 comments: true
 layout: post
-tags: django Virtualenv
+tags: Django
 ---
 
 

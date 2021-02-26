@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "vue-leaflet 마커 아이콘 나오게 하기 줌 이벤트 적용"
-tags: leaflet
+tags: Vue
 comments: true
 ---
 

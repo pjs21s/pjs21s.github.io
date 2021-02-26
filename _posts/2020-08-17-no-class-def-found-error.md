@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "NoClassDefFoundError 해결 방안"
-tags: gradle
+tags: Gradle
 comments: true
 ---
 

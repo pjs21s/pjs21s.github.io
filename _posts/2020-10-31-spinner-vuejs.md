@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vuex를 사용하여 Spinner 로딩 이펙트 적용하기"
-tags: vue
+tags: Vue
 comments: true
 ---
 

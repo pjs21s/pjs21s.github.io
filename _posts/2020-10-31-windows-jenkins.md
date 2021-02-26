@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "scp Sending file modes: C0755 60784209 윈도우10으로 보낼 때 오류"
-tags: jenkins
+tags: Jenkins
 comments: true
 ---
 

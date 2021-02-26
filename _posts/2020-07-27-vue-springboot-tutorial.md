@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vue.js와 Spring Boot 연동 및 CRUD JPA 기초"
-tags: Vue.js Spring
+tags: Vue Spring
 comments: true
 ---
 

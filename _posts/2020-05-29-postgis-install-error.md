@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "postgis 설치 중 Requires: libgeotiff.so.2()(64bit) 문제 해결"
-tags: postgis
+tags: Postgis
 comments: true
 ---
 

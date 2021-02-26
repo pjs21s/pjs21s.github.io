@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vue.js Django CRUD REST 해보기"
-tags: Vue.js
+tags: Vue
 comments: true
 ---
 

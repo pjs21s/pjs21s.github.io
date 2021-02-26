@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "rbenv shims in path not found 해결 방안"
-tags: ruby
+tags: Ruby
 comments: true
 ---
 

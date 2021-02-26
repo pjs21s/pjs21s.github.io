@@ -1,7 +1,7 @@
 ---
 title: "OneToOne을 이용해 User 모델 확장 Profile 생성"
 layout: post
-tag: django
+tag: Django
 comments: true
 ---
 

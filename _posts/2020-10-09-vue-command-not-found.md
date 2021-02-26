@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "'vue'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램 해결 방안"
-tags: vue
+tags: Vue
 comments: true
 ---
 

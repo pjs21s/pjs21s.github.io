@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vue.js Udemy 강의 세번째 과제"
-tags: Vue.js
+tags: Vue
 comments: true
 ---
 

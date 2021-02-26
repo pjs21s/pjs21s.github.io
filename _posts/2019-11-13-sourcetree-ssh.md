@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "맥북(in mac) Sourcetree Permission denied (publickey)"
-tags: sourcetree
+tags: Sourcetree
 comments: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "django social share 공유 기능 사용하기"
-tags: django
+tags: Django
 comments: true
 ---
 

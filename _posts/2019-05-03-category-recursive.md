@@ -2,7 +2,7 @@
 title: "django category 모델 만들기와 recursive 관계"
 layout: post
 comments: true
-tags: django recursive
+tags: Django Recursive
 ---
 
 * 참고

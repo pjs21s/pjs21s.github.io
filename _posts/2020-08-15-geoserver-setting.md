@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "geoserver shp 설정하기"
-tags: geoserver
+tags: Geoserver
 comments: true
 ---
 

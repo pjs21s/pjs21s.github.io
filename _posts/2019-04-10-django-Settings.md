@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "190405 django Setting.py 수정 메모"
-tags: django
+tags: Django
 comments: true
 ---
 

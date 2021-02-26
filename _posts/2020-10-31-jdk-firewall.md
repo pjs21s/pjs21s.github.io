@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "윈도우 10 스프링부트 JAR 포트를 열어도 외부 접속 불가할 때"
-tags: jdk
+tags: Java
 comments: true
 ---
 

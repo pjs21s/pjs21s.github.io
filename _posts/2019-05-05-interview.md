@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "개발 면접 기초, django 보안 "
-tag: interview
+tag: Interview
 comments: true
 ---
 

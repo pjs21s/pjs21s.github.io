@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "geotiff, geotools mirror 사이트 메모"
-tags: geotools
+tags: Geotools
 comments: true
 ---
 geotools를 다운해야 하는데 이클립스에서 다운을 해오지 못하는 에러가 발생했다.

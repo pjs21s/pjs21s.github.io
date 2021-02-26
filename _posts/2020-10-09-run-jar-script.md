@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "리눅스 jar 실행 스크립트 예시"
-tags: linux
+tags: Linux
 comments: true
 ---
 

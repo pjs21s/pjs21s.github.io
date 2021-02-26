@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "QueryDSL Vscode에서 설정하기"
-tags: querydsl
+tags: Querydsl
 comments: true
 ---
 

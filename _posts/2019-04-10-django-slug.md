@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "190407 django Slug 메모"
-tags: django
+tags: Django
 comments: true
 ---
 

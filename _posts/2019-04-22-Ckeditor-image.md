@@ -1,10 +1,7 @@
 ---
 layout: post
-
 title: "CKEditor 이미지 업로드 문제 해결"
-
-tags: django ckeditor
-
+tags: Django Ckeditor
 comments: true
 
 ---
