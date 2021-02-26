@@ -57,53 +57,9 @@ comments: true
 `filesToAdd`는 압축할 파일들 파라미터이다.  
 사용 예제는 아래 있다.
 
+<img src="/images/zipoutput-code.png">
 
-```java
-    public void zipOutputStream(String outputZipFileName, List<File> filesToAdd, HttpServletResponse response) throws IOException {
-
-        byte[] buff = new byte[4096];
-        int readLen = 0;
-
-        ZipParameters parameters = new ZipParameters();
-        response.setContentType("application/zip");
-        response.addHeader("content-disposition", "attachment; filename="+outputZipFileName);
-
-        try(ZipOutputStream zos = initializeZipOutputStream(response)) {
-            for (File fileToAdd : filesToAdd) {
-                parameters.setFileNameInZip(fileToAdd.getName());
-                
-                zos.putNextEntry(parameters);
-
-                try(InputStream inputStream = new FileInputStream(fileToAdd)) {
-                    while ((readLen = inputStream.read(buff)) != -1) {
-                        zos.write(buff, 0, readLen);
-                    }
-                }
-                zos.closeEntry();
-            }    
-
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private ZipOutputStream initializeZipOutputStream(HttpServletResponse response) throws IOException {
-
-        ServletOutputStream servletOutputStream = response.getOutputStream();
-        
-        return new ZipOutputStream(servletOutputStream);
-    }
-```
-
-```java
-    List<File> filesToAdd = new ArrayList<>();
-    String outputZipFileName = "result.zip";
-    String folderToCompress = "/Desktop/files/";
-
-    filesToAdd.add(new File(folderToCompress+"test.xml"));
-    
-    ServiceImpl.zipOutputStream(outputZipFileName, filesToAdd, response);
-```
+<img src="/images/zipoutput-code2.png">
 
 정말로 이게 최선의 방법인지는 자신이 없지만 조금이라도 나은 기능을 만들었다면
 개인적으로는 만족한다.
