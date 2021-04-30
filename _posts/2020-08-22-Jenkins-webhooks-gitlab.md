@@ -195,7 +195,7 @@ Publish over SSH 설정을 스크린샷처럼 해줍니다.
 <img src="/images/jenkinswebhooks22.png">
 
 **Passphrase** - 접속할 배포 서버의 암호  
-**Key** - Jenkins 서버에서 배포서버로 보낸 공개키
+**Key** - Jenkins 서버에서 생성한 개인키
 
 그리고 ssh servers 추가를 눌러서 추가로 적습니다.
 
