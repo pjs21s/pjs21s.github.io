@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "TooManyResultsException 원인 정리, MySQL timezone error"
-tags: Error
+tags: Mysql
 comments: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "mapstruct cannot find implementation for 에러 해결"
-tags: spring
+tags: Spring
 comments: true
 ---
 

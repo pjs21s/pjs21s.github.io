@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Eclipse - SunTlsRsaPremasterSecret외 에러 정리"
-tags: Error
+tags: Eclipse
 comments: true
 ---
 
