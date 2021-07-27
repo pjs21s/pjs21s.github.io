@@ -26,3 +26,7 @@ dependencies {
 ```
 
 Update Project 후 테스트하니 바로 성공했다.
+mapstruct를 mapper를 정의한 후에는 gradle build를 실행하고 사용해야 한다.
+그렇지 않으면 생성 된 파일이 없거나 정의 한 코드가 없어서 인식을 못한다.
+빌드를 했는데 아래 경로에 파일이 없으면 안된다.
+`\build\generated\sources\annotationProcessor\java\main\com\프로\젝트이름\dto\mapper\***MapperImpl.java`
