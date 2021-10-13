@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Postgresql 에러"
-tags: Error
+tags: Postgresql
 comments: true
 ---
 

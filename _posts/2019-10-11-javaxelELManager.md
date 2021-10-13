@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AWS 배포 오류 javax/el/ELManager"
-tags: Error
+tags: Java
 comments: true
 ---
 
