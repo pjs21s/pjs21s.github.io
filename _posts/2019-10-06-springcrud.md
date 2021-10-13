@@ -15,8 +15,6 @@ Mybatis + MySQL + Eclipse + Spring MVC 기반입니다.
 
 전체코드는 [깃허브](https://github.com/pjs21s/Spring_Capstone)에서 보실 수 있습니다. 
 
-
-
 # 레이아웃 JSP
 
 ```html
@@ -51,8 +49,6 @@ Bootstrap의 기능을 사용하고 있기때문에 CDN을 넣지 않으시면 �
 <a class="nav-link" href="list">글목록</a>
 ```
 
-
-
 ```html
 <!--list.jsp-->
 <body>
@@ -71,8 +67,6 @@ Bootstrap의 기능을 사용하고 있기때문에 CDN을 넣지 않으시면 �
 ```
 
 게시물을 누르면 읽을 수 있게 `read.jsp`를 만듭니다.
-
-
 
 ```html
 <!--read.jsp-->
@@ -94,8 +88,6 @@ Bootstrap의 기능을 사용하고 있기때문에 CDN을 넣지 않으시면 �
 
 삭제는 Url로 요청만 하면 되니 수정 페이지만 만들어줍니다.
 
-
-
 ```html
 <!--modify.jsp-->
 <!DOCTYPE html>
@@ -116,8 +108,6 @@ Bootstrap의 기능을 사용하고 있기때문에 CDN을 넣지 않으시면 �
 ```
 
 UI는 완성했으니 이제 DB에 테이블을 만들어야 합니다.
-
-
 
 MySQL에 이렇게 기본적인 내용만 만들어 주었습니다.
 

@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "190407 django Slug 메모"
+title: "django Slug 메모"
 tags: Django
 comments: true
 ---
-
-
 
 유효한 URL을 만들 때 사용하는 방법이다. 예를 들어 기사의 제목을 URL로 만들려 할 때 slug를 사용하는 걸 추천한다.
 

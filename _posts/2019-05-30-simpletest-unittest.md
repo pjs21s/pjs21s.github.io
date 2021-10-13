@@ -5,13 +5,8 @@ comments: true
 tag: TDD
 ---
 
-
-
 기능 테스트는 사용자 관점에서 애플리케이션 외부를 테스트하는 것 -> 제대로 기능성을 갖추게 함
-
 단위 테스트는 프로그래머 관점에서 내부를 테스트하는것 -> 깔끔하고 버그없는 코드를 위함
-
-
 
 # Traceback 읽기
 
@@ -55,8 +50,6 @@ def home_page(request):
     return HttpResponse('<html><title>To-Do lists</title></html>')
 ```
 
-
-
 ```python
 #urls.py
 from django.contrib import admin
@@ -68,8 +61,6 @@ urlpatterns = [
     path('', views.home_page, name='home'),
 ]
 ```
-
-
 
 ```python
 #lists/tests.py

@@ -5,8 +5,6 @@ tags: Vue
 comments: true
 ---
 
-
-
 ```html
 <script src="https://npmcdn.com/vue/dist/vue.js"></script>
 
@@ -25,8 +23,6 @@ comments: true
 </div>
 ```
 
-
-
 ```javascript
 new Vue ({
 	el: "#exercise",
@@ -41,11 +37,7 @@ new Vue ({
 })
 ```
 
-
-
 `Vue`에 `methods`를 만들어도 되지만 간단한 경우에는 `"value = $event.target.value"`로 바로 값을 이벤트가 일어나는 걸 가져와서 변경할 수도 있다.
-
-
 
 `v-model`은 양방향 바인딩을 지원한다.
 

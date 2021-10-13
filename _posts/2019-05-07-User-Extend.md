@@ -5,7 +5,6 @@ tag: Django
 comments: true
 ---
 
-
 # Profile 모델을 우선 만든다.
 
 여기서 `auth.models.User`부분은 개인에 따라 바뀔 수 있다. 보통은 위에 선언을 다 해놓고 사용하기 때문에 `User`로 사용하는게 대부분이다. 핵심은 `User`라는 클래스명을 가져오면 안되고 django에서 제공하는 `User`를 가져와야 한다. 그러므로 `auth.models.User`라는 값을 `Profile user`에 넣어준다.
@@ -125,8 +124,6 @@ admin.site.register(Profile)
 </form>
 ```
 {% endraw %}
-
-
 
 **참고**
 

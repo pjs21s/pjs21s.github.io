@@ -5,11 +5,7 @@ tags: Vue
 comments: true
 ---
 
-
-
 `watch`는 값이 변경될 때 함수를 동작하게 만들고 싶은 경우에 사용한다.
-
-
 
 ```html
 <script src="https://npmcdn.com/vue/dist/vue.js"></script>
@@ -27,8 +23,6 @@ comments: true
     </div>
 </div>
 ```
-
-
 
 ```javascript
 new Vue ({
@@ -52,13 +46,9 @@ new Vue ({
 })
 ```
 
-
-
 `Vue.js`에서는 생각보다 `this.value == 37 ? 'done' : 'not there yet'` 이 형식을 많이 쓴다.
 
 삼항연산자라고 하는데 익숙해져야겠다.
-
-
 
 ```html
 <div id="app">
@@ -68,8 +58,6 @@ new Vue ({
 </div>
 ```
 
-
-
 ```javascript
 new Vue ({
 	el: '#app',
@@ -78,8 +66,6 @@ new Vue ({
   },
 })
 ```
-
-
 
 `show = !show`는 버튼을 눌렀을때 show와 !show를 왔다 갔다 한다는 뜻이다.
 

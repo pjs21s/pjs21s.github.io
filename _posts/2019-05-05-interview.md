@@ -7,31 +7,18 @@ comments: true
 
 개발 면접에 필요한 기초적인 지식을 한번 정리해봤다.
 
-
-
 Serialization : 객체 또는 데이터를 외부에서도 사용가능하게 byte 형태로 변환하는 것
-
 Overloading : 메소드의 이름은 하나이지만 매개변수의 타입이나 이름을 다르게 사용하는 것
-
 Overriding : 부모 클래스로부터 상속받아 메소드를 재정의해서 사용하는 것, 조금만 메소드를 수정해서 사용하고 싶을 때 유용하다.
-
-
 
 **Object Oriented Programming**
 
 Polymorphism : 다형성, 하나의 클래스나 메소드가 다양한 방법으로 동작하는 것(ex. overloading, overriding)
-
 Inheritance : 중복을 최소화하기 위해 공통적으로 필요한 기능을 부모로 만들어 상속받아 사용하는 것
-
 Encapsulation : 중요한 정보를 함부로 조작하지 못하게 하기 위해 묶는 것
 
-
-
 Stack : Last In First Out, 후입선출
-
 Queue : First In First Out, 선입선출
-
-
 
 Model-View-Controller Pattern : 쉽게 고칠 수 있는 어플리케이션을 개발 가능케 한다. 설계를 위한 시간이 많이 필요하다. View-Model이 서로 의존적이다.
 
@@ -57,8 +44,6 @@ ViewModel : View를 표현하기 위해 만들어진 View를 위한 Model
 
 <img src="/images/mvvm.png">
 
-
-
 DeadLock - 교착상태 : 일련의 프로세스들이 서로가 가진 자원을 요청하고 기다리며 blocked 된 상태
 
 해결책 : 프로세스가 자원을 받기위해 대기하는 법이 있으나 어떤 프로세스가 얼마나 자원을 할당받아 사용할지 알수없으므로 비효율적이다. 그래서 Deadlock Ignorance로 대처한다.
@@ -66,8 +51,6 @@ DeadLock - 교착상태 : 일련의 프로세스들이 서로가 가진 자원�
 Deadlock Ignorance : 데드락이 일어나지 않는 것을 가정, 발생 시 사용자가 프로세스를 죽이게 한다.
 
 데드락 자체는 드문 현상이므로 가장 나은 방법
-
-
 
 **Security in django**
 
@@ -95,8 +78,6 @@ HTML에서 특정 escape characters를 사용하는 건 특히 위험하다. 대
 
 HTML을 DB에 저장할때 그리고 HTML을 불러오고 보여줄때 더욱 조심해야 한다. 
 
-
-
 ## Cross site request forgery (CSRF) protection
 
 CSRF 공격을 통해 악의적인 사용자는 유저의 지식이나 동의 없이 다른 유저의 자격을 사용해 작업을 한다.
@@ -110,7 +91,3 @@ HTTPS와 함께 배포될 때 **CsrfViewMiddleware**는 HTTP referrer header가 
 (**HTTP referrer**는 웹 브라우저로 월드 와이드 웹을 서핑할 때, 하이퍼링크를 통해서 각각의 사이트로 방문시 남는 흔적을 말한다.)
 
 **csrf_exempt**를 사용하여 주의하도록 합시다.
-
-
-
-다음에 추가로 읽으면서 번역해봐야겠다...

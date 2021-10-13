@@ -1,13 +1,10 @@
 ---
 layout: post
-title: "190408 django Pythonanywhere 설정법과 에러 정리"
+title: "django Pythonanywhere 설정법과 에러 정리"
 tags: Pythonanywhere
 comments: true
 ---
-
-
 <h6>이 포스트까지 네이버에서 옮긴 글</h6>
-
 
 1. 우측 상단에 있는 signup을 눌러 회원가입을 한다.
 2. 요금을 지불할 게 아니라면 Create a Beginner account를 클릭한다.

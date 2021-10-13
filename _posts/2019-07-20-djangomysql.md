@@ -22,8 +22,6 @@ ValueError: The field admin.LogEntry.user was declared with a lazy reference to 
 
 그래서 미리 이름을 안겹치게 다른 걸로 지정했다.
 
-
-
 일단 `startproejct`, `startapp`으로 프로젝트와 어플리케이션을 하나 만들어줍니다.
 
 그리고 `settings.py`의 값을 변경해줍니다.

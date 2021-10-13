@@ -1,10 +1,9 @@
 ---
-title: "190413 django Virtualenv, requirements 정리"
+title: "django Virtualenv, requirements 정리"
 comments: true
 layout: post
 tags: Django
 ---
-
 
 **Django Virtualenv 정리**
 

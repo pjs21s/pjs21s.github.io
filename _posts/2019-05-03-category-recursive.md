@@ -8,13 +8,9 @@ tags: Django Recursive
 * 참고
   * <https://stackoverflow.com/questions/44798651/why-to-use-self-foreignkey-in-django-models>
 
-
-
 django는 java에 비하면 한국 자료가 정말 없기에 자신과 타인을 위해서 정보를 기록해둔다.
 
 글을 분류해서 보여주기 위해 카테고리 모델을 만들어본다.
-
-
 
 ```python
 #models.py
@@ -33,8 +29,6 @@ class Post(models.Model, HitCountMixin):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
 ```
 
-
-
 `Category`모델을 만들다 보면 누구나 의문이 생긴다.
 
 `Post`에서 사용하기 위해 `Category`를 먼저 위에 정의해주면 `Category`에서는 `Post`에 연결을 못한다.
@@ -42,13 +36,11 @@ class Post(models.Model, HitCountMixin):
 `Post`모델이 `Category`모델 보다 아래에 있어서 인식을 못한다;
 
 
-
 그래서 `Category`는 `Post`와 직접적으로 연결을 하지 않고 recursive relationship
 
 즉 재귀적 관계를 이용해서 생성만 해주고 그걸 `Post`에서 가져다 사용한다.
 
 parent의 역할은 아래 이미지에서 더 쉽게 이해할 수 있습니다.
-
 
 
 ```python
@@ -61,7 +53,6 @@ fomrs.py에도 category 필드를 각자에 맞게 추가해줍니다.
 이렇게 다 하고 나면 admin에서 아래처럼 카테고리를 추가해줄 수 있습니다.
 
 
-
 <img src="/images/category1.png">
 
 parent의 역할은 카테고리를 하나 만든 후 상위 카테고리로 사용할 수 있게 해준다는 점입니다.
@@ -69,8 +60,6 @@ parent의 역할은 카테고리를 하나 만든 후 상위 카테고리로 사
 아직 직접 사용은 안 해봐서 정확히는 알 수 없지만 자신이 자신을 참조하는 재귀적 관계니 가능한 것 같습니다.
 
 <img src="/images/category2.png">
-
-
 
 카테고리를 만들었으면 Post에서 카테고리 설정을 해보세요.
 그리고 글을 카테고리에 맞게 분류해주어야 합니다.

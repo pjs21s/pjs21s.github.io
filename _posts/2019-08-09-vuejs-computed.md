@@ -5,8 +5,6 @@ tags: Vue
 comments: true
 ---
 
-
-
 ```html
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
@@ -18,8 +16,6 @@ comments: true
   <p>Result: {{ result() }} | {{ output }}</p>
 </div>
 ```
-
-
 
 ```javascript
 new Vue ({
@@ -71,7 +67,4 @@ new Vue ({
 
 `methods`로 계산하지 않아도 되는 부분까지 다시 재실행하는 것은 비효율적이기 때문이다.
 
-
-
 살짝 복잡한 개념이지만 계속 사용하다보면 익숙해질것같다.
-

@@ -6,15 +6,10 @@ comments: true
 ---
 
 Tomcat7을 사용하고 있고 AWS에 Maven통해서 배포를 하고 있다.
-
 오늘 validator 잘 사용해서 기분이 좋았는데 배포를 하고 사이트를 접속해보니 
-
 `java.lang.NoClassDefFoundError: javax/el/ELManager` 이런 오류가 났다.
-
 검색해보니 Tomcat7에 있는 버전이랑 뭐랑 호환이 안되서 충돌이 난다 어쩐다 말이 많다.
-
 첫번째 해결방법은 만약 추가가 안되어있다면 아래 dependency를 추가하는 것이다.
-
 근데 나는 이걸해도 안됐다.
 
 ```xml

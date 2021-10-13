@@ -1,10 +1,9 @@
 ---
 layout: post
-title: "190406 django LoginRequiredMixin, TabularInline"
+title: "django LoginRequiredMixin, TabularInline"
 tags: Django
 comments: true
 ---
-
 
 Class-based views를 사용할 때 `LoginRequiredMixin`을 쓰면 `login_required`와 같은 역할을 할 수 있다.
 이 Mixin을 view에서 사용할 경우 인증되지 않은 사용자들의 모든 요청들은 login page로 넘어가거나 HTTP 403 Error를 보이게 된다.

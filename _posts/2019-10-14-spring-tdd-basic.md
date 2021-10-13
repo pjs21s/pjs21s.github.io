@@ -114,6 +114,4 @@ public class UserDAOTest {
 
 그래서 이 코드로 더미 데이터도 넣을 수 있다.
 
-
-
 그리고 여담으로 `Controller`에서 `Service`를 선언할때 `final`을 같이 작성해주는데 이는 `Controller` 내부에서 다른요인으로 인해 수정이 불가능하게 만들어 준다.

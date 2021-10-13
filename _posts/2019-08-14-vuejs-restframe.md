@@ -7,25 +7,15 @@ comments: true
 
 출처: https://medium.com/quick-code/crud-app-using-vue-js-and-django-516edf4e4217
 
-
-
 Vue.js를 배우고 있으니 Django와 연동해서 만들 수 있으면 좋겠다는 생각을 했다.
-
 근데 찾아봐도 한국 자료는 없는거 같아서... 내가 이해를 못하는건지 하여튼
-
 찾아보니 Medium에 튜토리얼이 있어서 따라해봤다.
-
 그리고 Vue resource를 알아보기 위해 검색하니 또 axios를 쓰는게 인증된 방식이라고 한다...
-
 그래서 axios로 수정한 코드도 마지막에 넣었다.
 
 
-
 여기에 포스팅을 하는 내용은 제 주관적인 내용이 더 들어가 있기에 원문을 보실 수 있다면 보시는게 더 좋습니다.
-
 필자는 Django에 대한 기본 이해가 있는 상태이므로 Django에 대한 설명은 본문에 비해 생략이 많이 됩니다.
-
-
 
 * Django 설치
 * Django-Project와 app 생성
@@ -35,27 +25,19 @@ Vue.js를 배우고 있으니 Django와 연동해서 만들 수 있으면 좋겠
 * Vue.js와 Django를 연결
 
 
-
 # Django를 설치하자
 
 빈 폴더를 하나 만들고 `python -m venv myvenv`로 가상환경을 만듭니다.
-
 `myvenv\Scripts\activate`로 가상환경을 실행합니다.
-
 가상환경은 독립된 환경이므로 Django와 같은 것들을 다시 설치해야합니다.
-
 `pip install django`
 
 # Django-proejct와 app 만들기
 
 Django까지 설치를 했다면 가상환경을 실행한 상태에서 `django-admin startproject myproject`를 만듭니다.
-
 `cd myproject`로 프로젝트 안으로 이동한후에 `python manage.py startapp article`을 생성합니다.
-
 만약 이 명령어가 작동하지 않는다면 `manage.py`가 없는 곳에서 명령어를 실행했을 가능성이 높기때문에 확인을 다시 한 번 하시는게 좋습니다.
-
 `settings.py`에 가서 아래와 같이 추가합니다.
-
 `article` 사용하기 위해 등록하는 것입니다.
 
 ```python
@@ -87,8 +69,6 @@ TEMPLATES = [
 ]
 ```
 
-
-
 # 모델을 만들고 마이그레이션
 
 `article` 폴더 안에 있는 `models.py`에 가셔서 `Article`모델을 생성합니다.
@@ -114,8 +94,6 @@ REST에 대한 전반적인 설명은 아래 링크를 보시면 너무나도 �
 
 [[Network\] REST란? REST API란? RESTful이란? - Heee's Development Blog](https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html)
 
-
-
 django rest framework를 설치합니다.
 
 `pip install djangorestframework`
@@ -136,7 +114,6 @@ INSTALLED_APPS = [
 # Serializer, Viewset & Routers를 만들자
 
 이제 `serializers.py`를 `article`안에 만들어줍니다.
-
 디렉토리 구조가 헷갈리실 수 있으니 구조도 올립니다.
 
 ```
@@ -169,8 +146,6 @@ class ArticleSerializer(serializers.ModelSerializer):
 
 처음에 serializers를 import하고 모델을 import 해야합니다.
 
-
-
 그 후 같은 폴더에 `viewsets.py`를 생성합니다.
 
 ```python
@@ -184,8 +159,6 @@ class ArticleViewSet(viewsets.ModelViewSet):
 ```
 
 viewsets은 django의 view와 같은 보여주기 위한 로직을 담당하는 부분이 아닌가 싶습니다.
-
-
 
 `settings.py`이 있는 `myproject`폴더에 `routers.py`를 생성합니다.
 
@@ -244,8 +217,6 @@ urlpatterns = [
 
 PATCH는 모르겠...
 
-
-
 # Vue.js와 Django를 연결
 
 `article`폴더 내에 `templates`을 만들고 그 안에 `article`폴더를 다시 만들고 `index.html`을 생성합니다.
@@ -275,14 +246,9 @@ article - templates - article - index.html
 ```
 
 Bootstrap과 Vue.js의 CDN을 넣어줍니다.
-
 Vue-resource도 REST API를 불러오기 위해 사용합니다.
-
 앞에서도 말씀드렸듯이 이제는 axios를 사용해야 합니다...
-
 하지만 일단 REST API에 익숙해지기 위해 이걸로 기초를 쌓는다고 생각하겠습니다.
-
-
 
 `urls.py`을 업데이트 합니다.
 
@@ -298,8 +264,6 @@ urlpatterns = [
     path('article', TemplateView.as_view(template_name='article/index.html')),
 ]
 ```
-
-
 
 ```javascript
 <script type="text/javascript">
@@ -324,13 +288,9 @@ new Vue({
 ```
 
 Vue.js에서 `el`은 html에서의 `id`를 의미한다.
-
 data에는 사용할 변수들을 정의해준다.
-
 delimiters는 vue.js data를 사용할때 사용할 태그를 정의한 것이다.
-
 기본값은 `["{{", "}}"]` 이것인데 Django와 겹치기 때문에 위와 같이 다르게 정의한다.
-
 mounted는 화면을 렌더링 한 후에 작동하게 하기위해 사용한다.
 
 ```javascript
@@ -513,8 +473,6 @@ table 태그 밑에 아래와 같이 Add Article Modal을 추가한다.
           <!-- End of add article modal -->
 ```
 
-
-
 **Edit Modal**
 
 `<button class="btn btn-info" v-on:click="getArticle(article.article_id)">Edit</button>`
@@ -575,21 +533,15 @@ Script 코드는 이미 위에 추가를 해두었으니 html에만 추가하면
 
 `<button class="btn btn-danger" v-on:click="deleteArticle(article.article_id)">Delete</button>`
 
-
-
 `python manage.py runserver`
 
 `http://localhost:8000/article`에 들어가서 테스트를 해보면 잘 작동한다.
 
 혹시 작동을 하지 않으면 오타나 순서문제일 가능성이 있으니 검토하거나 그래도 작동하지 않으면 원문 하단에 github 주소가 있으니 거기서 코드를 보면 된다.
 
-
-
 완벽하게 이해를 한건 아니지만 Vue.js 강의를 좀 더 듣고 axios를 다시 해보면 조금 더 이해할 수 있지 않을까 싶다.
 
 그래서 몇 시간을 걸쳐서 고쳤다... 사실 수정하는건 별거 아닌데 코드 하나를 잘못건드려서 원인을 알아내느라 오래걸렸다.
-
-
 
 우선 Script에 있는 vue-resource CDN을 지우고 axios CDN을 넣는다.
 

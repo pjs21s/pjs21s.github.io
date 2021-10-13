@@ -3,18 +3,13 @@ layout: post
 title: "CKEditor 이미지 업로드 문제 해결"
 tags: Django Ckeditor
 comments: true
-
 ---
-
-
 
 CKEditor에 있는 이미지 업로드 기능을 사용하려니 생각보다 설정하고 수정해야할게 많았다.
 
 그리고 한국어로 된 자료는 거의 나오지도 않아서 영어 자료를 일일히 찾아봐야 했다.
 
 한번 정리를 해보자
-
-
 
 우선 **static**과 **media**의 개념부터 잡자
 
@@ -23,12 +18,9 @@ CKEditor에 있는 이미지 업로드 기능을 사용하려니 생각보다 �
 * media : 유저가 업로드하는 정적인 파일을 의미한다.
 
 
-
 CKEditor에서 이미지 업로드를 수행하기 위한 기본 설정은 검색하거나 공식 문서를 보고 하면 된다.
 
 공식문서 : <https://github.com/django-ckeditor/django-ckeditor>
-
-
 
 하지만 참고하실분들을 위해 제 소스도 올리겠습니다.
 
@@ -42,8 +34,6 @@ CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 ```
-
-
 
 ```python
 #models.py
@@ -85,8 +75,6 @@ urlpatterns = [
 `Incorrect server response`오류가 발생합니다.
 
 그리고 서버를 클릭하니까 갑자기 django admin 페이지가 올라옵니다.
-
-
 
 찾아보니 ckeditor_uploader의 urls.py의 원본 소스를 보라는 말이 나옵니다.
 

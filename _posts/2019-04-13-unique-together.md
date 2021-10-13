@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "190413 django unique_together 정리"
+title: "django unique_together 정리"
 tags: Django
 comments: true
-
 ---
 
 CKEditor를 적용하고 글을 쓰려고 하니 자꾸 `UNIQUE constraint failed, IntegrityError`에러가 발생했다.

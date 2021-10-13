@@ -59,8 +59,6 @@ def scramble(s1, s2):
 
 `all(x)`는 iterable 자료형 x를 인수로 받아 x가 모두 참이면 `True` 하나라도 거짓이면 `False`를 반환한다.
 
-
-
 즉 `for x in set(s2)`를 통해 `s2`에서 문자열 하나씩 x에 넣어준다.
 
 그리고 x라는 문자열이 `s1`과 `s2`에 있는지 체크한다.

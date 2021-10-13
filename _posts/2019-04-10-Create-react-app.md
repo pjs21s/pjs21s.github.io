@@ -1,10 +1,9 @@
 ---
 layout: post
-title: "181228 Create-react-app 기본 설치 방법"
+title: "Create-react-app 기본 설치 방법"
 tags: React
 comments: true
 ---
-
 
 우선 Node.js가 설치가 되어있어야한다.
 

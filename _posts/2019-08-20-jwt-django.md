@@ -21,13 +21,9 @@ JWT를 사용함으로 서버는 유저의 세션을 유지할 필요가 없습�
 - Django (2.0, 2.1, 2.2)
 - Django REST Framework (3.8, 3.9, 3.10)
 
-
-
 Django Rest API를 다뤄보고 이 예제를 진행하는게 더 이해를 하기 쉽습니다.
 
 저도 그렇게 했기 때문에 REST Framework에 대한 설명은 아마 적을 듯 합니다.
-
-
 
 JWT는 **access token**과 **refresh token**을 가지고 있습니다.
 
@@ -36,8 +32,6 @@ JWT는 **access token**과 **refresh token**을 가지고 있습니다.
 **refresh token**은 조금 더 긴 24시간동안 살아있고 역시 커스터마이징이 가능하다.
 
 토큰이 만료가 되면 당연히 다시 로그인을 해야한다.
-
-
 
 왜냐하면 중요한 정보를 담고 있기 때문이다.
 
@@ -120,8 +114,6 @@ urlpatterns = [
 
 ```
 
-
-
 apiviews에 있는 **views.py**에 아래의 코드를 넣어준다.
 
 ```python
@@ -169,8 +161,6 @@ curl을 사용하라고도 하는데 curl보다 훨씬 편하니까 HTTPie를 �
 
 https://httpie.org/
 
-
-
 그리고 토큰을 보려면 인증된 사용자가 필요하기 때문에 유저를 생성해준다.
 
 ```python
@@ -183,8 +173,6 @@ Password : 123으로 하고
 
 하면 패스워드를 8자 이상을 하지 않아도 된다.
 
-
-
 만약에 인증된 사용자를 만들지 않고 토큰 값을 얻어오려고 하면 이런 에러가 발생한다.
 
 ```python
@@ -192,8 +180,6 @@ AttributeError: 'NoneType' object has no attribute 'split'
 ----------------------------------------
 Unauthorized: /api/token/
 ```
-
-
 
 # 토큰 얻어오기
 
@@ -203,19 +189,13 @@ Unauthorized: /api/token/
 
 <img src="/images/jwt2.png">
 
-
-
 정상적으로 접근했다면 토큰 값이 보여야하고 그렇지 않은 경우 아래와 같은 값이 나올 수 있다.
 
 `"detail": "No active account found with the given credentials"`
 
-
-
 그 후 **access token**을 넣고 해보면 메세지를 볼 수 있다.
 
 `http http://127.0.0.1:8000/hello/ "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTY2MjkwODQ2LCJqdGkiOiI4MDU1Yzk4ZTJkYzE0YjlhYmFiNWRjZmM1ODI2NTY5MyIsInVzZXJfaWQiOjF9.1UnTrEFsCBHnfRqK__pd04rBVMX129OOrNjoFTzd8Iw"`
-
-
 
 **Bearer** 이후에 본인의 access token 값을 넣으면 된다.
 
@@ -223,16 +203,10 @@ Unauthorized: /api/token/
 
 `Token is invalid or expired`라는 메세지를 볼 수 있다.
 
-
-
 이번엔 **refresh token**을 넣어보자
 
 `http post http://127.0.0.1:8000/api/token/refresh/ refresh=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTU2NjM3Njk0NiwianRpIjoiZjhmN2MyZTFhNzY1NDBmZDkxNmYwNzMwYjNiY2Q1NGIiLCJ1c2VyX2lkIjoxfQ.TcslE3gQ5uFsYD6LLSIWzgQrjlq1X5kVWThovac7-J0`
 
-
-
 그러면 access token을 볼 수 있다. 근데 이 access token은 새로운 것이기 때문에 다음 요청을 할 때는 이 access token을 사용해야 한다.
-
-
 
 문제가 생긴다면 원문을 참고하시는게 제일 좋습니다. 혹은 스택오버플로우...
