@@ -7,7 +7,7 @@ comments: true
 
 Unexpected token ' in JSON at position 1과 같이 에러가 발생할 때가 있다.  
 
-```JSON
+```javascript
 "{'test-history': 111, 'test-success-rate': 222, 'test-user-build-api': 333, 'cards': 444}"
 ```
 
