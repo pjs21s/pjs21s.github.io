@@ -31,7 +31,8 @@ class Timer(contextlib.ContextDecorator):
         print(f"{self.name}의 수행시간 : {operation_time}")
 ```
 
-1. 아무것도 사용하지 않은 기본 코드
+1. 아무것도 사용하지 않은 기본 코드  
+
 ```python
 df = pd.read_csv('test_date.csv')
 
@@ -49,7 +50,8 @@ for _ in range(10):
     basic_csv(df)
 ```
 
-2. 정규식만 통합
+2. 정규식만 통합  
+
 ```python
 df = pd.read_csv('test_date.csv')
 
@@ -65,7 +67,8 @@ for _ in range(10):
     integrate_only_regex(df)
 ```
 
-3. 함수 사용하지 않고 apply, lambda 사용
+3. 함수 사용하지 않고 apply, lambda 사용  
+
 ```python
 df = pd.read_csv('test_date.csv')
 
@@ -79,7 +82,8 @@ for _ in range(10):
     not_use_func(df)
 ```
 
-4. 함수 정의하여 apply, lambda 사용
+4. 함수 정의하여 apply, lambda 사용  
+
 ```python
 def check_ampm(stred_date):
     index = re.search('오전|오후', stred_date)
