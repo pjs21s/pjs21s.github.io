@@ -101,6 +101,7 @@ plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-paginate
+  - jekyll-seo-tag # added 2025.04.30 to make better SEO
 
 # Exclude these files from your production _site
 exclude:
